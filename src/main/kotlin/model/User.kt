@@ -23,3 +23,17 @@ data class User(
     val password: String,
 )
 
+@Serializable
+data class UserRegisterRequest(
+    val name: String,
+    val surname: String,
+    val email: String,
+    val password: String
+)
+
+@Serializable
+data class UserLoginRequest(
+    val email: String,
+    val password: String
+)
+
