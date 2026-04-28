@@ -22,3 +22,22 @@ data class Bus(
     val color: String,
     val amountPlaces: Int
 )
+
+@Serializable
+data class CreateBusRequest(
+    val registrationNumber: String,
+    val model: String,
+    val color: String,
+    val amountPlaces: Int
+)
+
+@Serializable
+data class UpdateBusRequest(
+    val id: Int,
+    val registrationNumber: String,
+    val model: String,
+    val color: String,
+    val amountPlaces: Int
+)
+
+

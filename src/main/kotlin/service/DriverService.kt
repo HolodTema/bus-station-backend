@@ -20,7 +20,7 @@ class DriverService {
             it[surname] = request.surname
             it[email] = request.email
             it[password] = hashedPassword
-            it[licenseCategoryId] = request.licenseCategoryId
+//            it[licenseCategoryId] = request.licenseCategoryId
             it[experienceYears] = request.experienceYears
         }
 
@@ -54,7 +54,7 @@ class DriverService {
                     surname = it[Drivers.surname],
                     email = it[Drivers.email],
                     password = it[Drivers.password],
-                    licenseCategoryId = it[Drivers.licenseCategoryId],
+//                    licenseCategoryId = it[Drivers.licenseCategoryId],
                     experienceYears = it[Drivers.experienceYears],
                 )
             }.singleOrNull()
@@ -69,7 +69,7 @@ class DriverService {
                     surname = it[Drivers.surname],
                     email = it[Drivers.email],
                     password = it[Drivers.password],
-                    licenseCategoryId = it[Drivers.licenseCategoryId],
+//                    licenseCategoryId = it[Drivers.licenseCategoryId],
                     experienceYears = it[Drivers.experienceYears],
                 )
             }.singleOrNull()

@@ -23,7 +23,7 @@ data class Driver(
     val surname: String,
     val email: String,
     val password: String,
-    val licenseCategoryId: Int,
+//    val licenseCategoryId: Int,
     val experienceYears: Int
 )
 
@@ -33,7 +33,7 @@ data class DriverRegisterRequest(
     val surname: String,
     val email: String,
     val password: String,
-    val licenseCategoryId: Int,
+//    val licenseCategoryId: Int,
     val experienceYears: Int
 )
 
