@@ -2,6 +2,7 @@ package com.example.service
 
 import at.favre.lib.crypto.bcrypt.BCrypt
 import com.example.model.User
+import com.example.model.UserLoginRequest
 import com.example.model.UserRegisterRequest
 import com.example.model.Users
 import org.jetbrains.exposed.sql.insert
@@ -25,14 +26,14 @@ class UserService {
         getUserById(userId)
     }
 
-    fun login(email: String, password: String): User? = transaction {
-        val user = getUserByEmail(email)
+    fun login(request: UserLoginRequest): User? = transaction {
+        val user = getUserByEmail(request.email)
         if (user == null) {
             return@transaction null
         }
 
         val isPasswordValid = BCrypt.verifyer()
-            .verify(password.toCharArray(), user.password)
+            .verify(request.password.toCharArray(), user.password)
             .verified
 
         if (isPasswordValid) {
