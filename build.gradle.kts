@@ -30,13 +30,16 @@ dependencies {
     // To hash passwords with BCrypt algorithm
     implementation("at.favre.lib:bcrypt:0.10.2")
 
-    // Exposed ORM to work with PostgreSQL DB
+    // Exposed ORM to work with SQLITE DB
     implementation("org.jetbrains.exposed:exposed-core:0.44.1")
     implementation("org.jetbrains.exposed:exposed-dao:0.44.1")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.44.1")
-    implementation("org.postgresql:postgresql:42.7.7")
-    // to work with datetime fields of PostgreSQL and Exposed ORM
     implementation("org.jetbrains.exposed:exposed-java-time:0.44.1")
+    // to work with datetime fields of PostgreSQL and Exposed ORM
+    // HikariCP
+    implementation("com.zaxxer:HikariCP:5.1.0")
+    // SQLite драйвер
+    implementation("org.xerial:sqlite-jdbc:3.47.0.0")
 
     // Ktor core
     implementation("io.ktor:ktor-server-core-jvm")

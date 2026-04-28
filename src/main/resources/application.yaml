@@ -10,8 +10,8 @@ jwt:
     issuer: "bus-station-backend-app"
     realm: "bus-station"
 
-storage:
+database:
   dbType: sqlite
   url: "jdbc:sqlite:./my_database.db"
   driverClassName: "org.sqlite.JDBC"
-  maximumPoolSize: 1
+  maxPoolSize: 1
