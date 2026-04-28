@@ -36,3 +36,34 @@ data class Voyage(
     val busId: Int
 )
 
+@Serializable
+data class CreateVoyageRequest(
+    val name: String,
+    val startStationId: Int,
+    val endStationId: Int,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val startTime: LocalDateTime,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val endTime: LocalDateTime,
+    val cost: Int,
+    val driverId: Int,
+    val busId: Int
+)
+
+@Serializable
+data class UpdateVoyageRequest(
+    val id: Int,
+    val name: String,
+    val startStationId: Int,
+    val endStationId: Int,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val startTime: LocalDateTime,
+    @Serializable(with = LocalDateTimeSerializer::class)
+    val endTime: LocalDateTime,
+    val cost: Int,
+    val driverId: Int,
+    val busId: Int
+)
+
+
+
