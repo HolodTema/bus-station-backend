@@ -22,3 +22,17 @@ data class Admin(
     val password: String,
 )
 
+@Serializable
+data class AdminRegisterRequest(
+    val name: String,
+    val surname: String,
+    val email: String,
+    val password: String
+)
+
+@Serializable
+data class AdminLoginRequest(
+    val email: String,
+    val password: String
+)
+

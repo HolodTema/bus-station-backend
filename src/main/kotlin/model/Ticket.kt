@@ -22,3 +22,20 @@ data class Ticket(
     val hasBaggage: Boolean
 )
 
+@Serializable
+data class CreateTicketRequest(
+    val voyageId: Int,
+    val userId: Int,
+    val placeNumber: Int,
+    val hasBaggage: Boolean
+)
+
+@Serializable
+data class UpdateTicketRequest(
+    val id: Int,
+    val voyageId: Int,
+    val userId: Int,
+    val placeNumber: Int,
+    val hasBaggage: Boolean
+)
+

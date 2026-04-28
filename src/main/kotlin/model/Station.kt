@@ -24,3 +24,23 @@ data class Station(
     val hasCaffe: Boolean,
     val hasTown: Boolean
 )
+
+@Serializable
+data class CreateStationRequest(
+    val name: String,
+    val hasBuilding: Boolean,
+    val hasRestroom: Boolean,
+    val hasCaffe: Boolean,
+    val hasTown: Boolean
+)
+
+@Serializable
+data class UpdateStationRequest(
+    val id: Int,
+    val name: String,
+    val hasBuilding: Boolean,
+    val hasRestroom: Boolean,
+    val hasCaffe: Boolean,
+    val hasTown: Boolean
+)
+
