@@ -1,6 +1,17 @@
 ktor:
   deployment:
-    port: 8080
+    port: 8090
   application:
     modules:
-      - com.example.RoutingKt.configureRouting
+      - com.example.MainKt.module
+
+jwt:
+    secret: ${JWT_SECRET}
+    issuer: "bus-station-backend-app"
+    realm: "bus-station"
+
+storage:
+  dbType: sqlite
+  url: "jdbc:sqlite:./my_database.db"
+  driverClassName: "org.sqlite.JDBC"
+  maximumPoolSize: 1
